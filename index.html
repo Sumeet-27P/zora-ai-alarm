@@ -25,20 +25,35 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        
+        /* High Fantasy Background Interference */
         .novel-illustration {
             position: fixed;
-            bottom: -5%;
-            right: -5%;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.05;
+            opacity: 0.12; /* Faint enough to remain as 'interference' */
             pointer-events: none;
             z-index: -1;
-            background-image: url('https://img.icons8.com/ios/500/000000/sun--v1.png');
+            /* Using the high-fantasy artwork provided */
+            background-image: url('https://storage.googleapis.com/static-assets-public/zora_dragon_bg.png');
             background-repeat: no-repeat;
-            background-position: bottom right;
-            background-size: 40%;
+            background-position: center;
+            background-size: cover;
+            filter: saturate(0.6) brightness(1.05);
+            transform-origin: center;
+            animation: float-island 25s ease-in-out infinite;
         }
+
+        /* Slow floating animation to bring the background to life */
+        @keyframes float-island {
+          0% { transform: scale(1.0) translateY(0px) rotate(0deg); }
+          33% { transform: scale(1.02) translateY(-15px) rotate(0.5deg); }
+          66% { transform: scale(1.01) translateY(10px) rotate(-0.5deg); }
+          100% { transform: scale(1.0) translateY(0px) rotate(0deg); }
+        }
+
         .glass-panel {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);

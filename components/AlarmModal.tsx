@@ -118,7 +118,7 @@ const AlarmModal: React.FC<AlarmModalProps> = ({ isOpen, use24Hour, onClose, onS
       <div className="bg-white border border-slate-200 rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col max-h-[90vh]">
         <div className="p-10 overflow-y-auto space-y-10">
           <div className="flex justify-between items-center border-b border-slate-50 pb-6">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 uppercase">Synchronize</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900 uppercase">Set Alarm</h2>
             <button onClick={onClose} className="text-slate-300 hover:text-slate-900 text-3xl font-light">×</button>
           </div>
 
@@ -134,7 +134,7 @@ const AlarmModal: React.FC<AlarmModalProps> = ({ isOpen, use24Hour, onClose, onS
 
           <div className="space-y-8">
             <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-3">Sync Label</label>
+              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-3">Alarm Label</label>
               <input 
                 type="text" 
                 placeholder="Synchronize at dawn..."
@@ -146,7 +146,7 @@ const AlarmModal: React.FC<AlarmModalProps> = ({ isOpen, use24Hour, onClose, onS
 
             <div className="bg-slate-50 p-6 rounded-2xl space-y-6">
               <div className="flex items-center justify-between">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Auditory Vessel</label>
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">RINGING SOUND</label>
                 <button 
                   onClick={() => fileInputRef.current?.click()}
                   className="text-[10px] font-bold text-amber-600 hover:underline"
@@ -223,7 +223,7 @@ const AlarmModal: React.FC<AlarmModalProps> = ({ isOpen, use24Hour, onClose, onS
             Cancel
           </button>
           <button onClick={handleSave} className="flex-1 px-4 py-4 bg-slate-900 text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20">
-            Confirm Sync
+            Confirm Alarm
           </button>
         </div>
       </div>

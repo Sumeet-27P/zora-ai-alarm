@@ -12,7 +12,7 @@ export interface Alarm {
   id: string;
   time: string; // HH:mm format
   label: string;
-  date?: string; // Legacy field
+  description?: string;
   specificDates?: string[]; // Array of YYYY-MM-DD
   dateRange?: {
     from: string;
@@ -21,6 +21,7 @@ export interface Alarm {
   repeatDays?: DayOfWeek[]; // [0-6] for weekly repeats
   isEnabled: boolean;
   soundId: string;
+  isAiEnabled?: boolean;
 }
 
 export interface DayData {

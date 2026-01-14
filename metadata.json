@@ -1,5 +1,8 @@
 {
-  "name": "Copy of Copy of Zora - Dawn Calendar & Alarms",
-  "description": "A radiant, clean offline-first calendar and alarm system. Synchronize your day with Zora, featuring smart time zone detection and flexible scheduling.",
-  "requestFramePermissions": []
+  "name": "Zora - AI Dawn Assistant",
+  "description": "A radiant, AI-powered offline-first calendar and alarm system. Featuring natural language event scheduling and personalized AI morning greetings with voice synthesis.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
 }

@@ -10,7 +10,8 @@ export interface SoundAsset {
 
 export interface Alarm {
   id: string;
-  time: string; // HH:mm format
+  time: string; // HH:mm format (Start Time)
+  endTime?: string; // HH:mm format (End Time for events)
   label: string;
   description?: string;
   specificDates?: string[]; // Array of YYYY-MM-DD
@@ -22,6 +23,7 @@ export interface Alarm {
   isEnabled: boolean;
   soundId: string;
   isAiEnabled?: boolean;
+  type?: 'alarm' | 'event';
 }
 
 export interface DayData {

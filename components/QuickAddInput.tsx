@@ -24,8 +24,6 @@ const QuickAddInput: React.FC<QuickAddInputProps> = ({ onAdd, isLoading }) => {
       recognition.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setValue(transcript);
-        // Optionally auto-submit:
-        // onAdd(transcript).then(() => setValue(''));
       };
 
       recognitionRef.current = recognition;
@@ -70,7 +68,7 @@ const QuickAddInput: React.FC<QuickAddInputProps> = ({ onAdd, isLoading }) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         disabled={isLoading}
-        placeholder={isLoading ? "Zora is processing..." : "Tell Zora: 'Swim next Monday at 7am'"}
+        placeholder={isLoading ? "Zora is processing..." : "Tell Zora: 'Meeting at 3pm' or 'Wake me up at 7am'"}
         className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-3 pl-12 pr-4 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all placeholder:text-slate-400 text-slate-700"
       />
       {isLoading && (
